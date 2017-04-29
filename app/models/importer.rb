@@ -30,6 +30,7 @@ class Importer
       beers = @brewery_db.beers.all(styleId: style.original_id)
       beers.each do |remote_beer|
         remote_beer[:original_id]       = remote_beer.delete(:id)
+        remote_beer[:style_summary]     = remote_beer.delete(:style)
         remote_beer[:style_original_id] = style.original_id
 
         beer = Beer.where(original_id: remote_beer.original_id).first_or_create

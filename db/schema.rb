@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170428014632) do
+ActiveRecord::Schema.define(version: 20170429191242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20170428014632) do
     t.integer  "ibu"
     t.jsonb    "glass"
     t.string   "style_original_id"
-    t.jsonb    "style"
+    t.jsonb    "style_summary"
     t.boolean  "is_organic"
     t.jsonb    "labels"
     t.string   "serving_temperature"
