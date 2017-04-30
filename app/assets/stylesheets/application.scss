@@ -1,0 +1,29 @@
+@import "materialize/components/color";
+
+$primary-color: color("blue-grey", "darken-4") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: color("amber", "accent-2") !default;
+$success-color: color("light-green", "darken-1") !default;
+$error-color: color("red", "lighten-2") !default;
+$link-color: color("yellow", "darken-4") !default;
+
+@import "materialize";
+@import "materialize/extras/nouislider";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: darken(color("blue-grey", "darken-4"), 10%);
+  color: color("white", "base");
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.main-bar {
+  background: color("black", "base");
+}

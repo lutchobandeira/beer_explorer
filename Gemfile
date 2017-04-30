@@ -17,6 +17,8 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "brewery_db", "~> 0.2.4"
 gem "figaro", "~> 1.1", ">= 1.1.1"
+gem "materialize-sass", "~> 0.98.2"
+gem "material_icons", "~> 2.2", ">= 2.2.1"
 
 group :development, :test do
   gem "byebug", platform: :mri
