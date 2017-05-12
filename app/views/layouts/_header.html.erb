@@ -1,6 +1,12 @@
-<nav class="main-bar" role="navigation">
+<nav class="main-bar grey darken-4" role="navigation">
   <div class="nav-wrapper container">
-    <%= link_to t("application.title"), root_path, id: "logo-container", class: "brand-logo yellow-text" %>
+    <%= link_to root_path, id: "logo-container", class: "brand-logo amber-text darken-2-text" do %>
+      <span class="fa-stack">
+        <i class="fa fa-folder fa-stack-2x"></i>
+        <i class="fa fa-glass fa-stack-1x grey-text text-darken-4"></i>
+      </span>
+      <%= t("application.title") %>
+    <% end %>
 
     <ul id="nav-mobile" class="side-nav">
       <li></li>

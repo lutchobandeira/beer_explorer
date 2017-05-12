@@ -11,19 +11,8 @@ $link-color: color("yellow", "darken-4") !default;
 
 @import "materialize";
 @import "materialize/extras/nouislider";
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background: darken(color("blue-grey", "darken-4"), 10%);
-  color: color("white", "base");
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-.main-bar {
-  background: color("black", "base");
-}
+@import "material_icons";
+@import "font-awesome";
+@import "materialize_overrides";
+@import "custom";
+@import "beers";

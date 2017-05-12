@@ -1,0 +1,33 @@
+.clearfix:before, 
+.clearfix:after {
+  content: " "; 
+  display: table; 
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.crop {
+  position: relative;
+  width: 256px;
+  height: 140px;
+  overflow: hidden;
+  margin: auto;
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+  }
+
+  img.portrait {
+    width: 100%;
+    height: auto;
+  }
+}

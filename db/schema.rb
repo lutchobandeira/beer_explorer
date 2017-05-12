@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170429191242) do
+ActiveRecord::Schema.define(version: 20170502231954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170429191242) do
     t.boolean  "is_organic"
     t.jsonb    "labels"
     t.string   "serving_temperature"
-    t.string   "servingTemperature_display"
+    t.string   "serving_temperature_display"
     t.string   "status"
     t.string   "status_display"
     t.string   "available_id"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20170429191242) do
     t.string   "beer_variation_id"
     t.jsonb    "beer_variation"
     t.string   "year"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "styles", force: :cascade do |t|

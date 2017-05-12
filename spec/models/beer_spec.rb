@@ -15,7 +15,7 @@ RSpec.describe Beer do
     it { should respond_to(:is_organic) }
     it { should respond_to(:labels) }
     it { should respond_to(:serving_temperature) }
-    it { should respond_to(:servingTemperature_display) }
+    it { should respond_to(:serving_temperature_display) }
     it { should respond_to(:status) }
     it { should respond_to(:status_display) }
     it { should respond_to(:available_id) }

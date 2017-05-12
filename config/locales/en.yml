@@ -1,4 +1,15 @@
 en:
   application:
     title: "Beer Explorer"
+  beers:
+    show:
+      abv: "ABV"
+      description: "About this beer"
+      food_pairings: "Food Pairings"
+      ibu: "IBU"
+      search_glass: "Search about this glass"
+      serving_temperature: "Temperature"
+      suggested_glass: "Suggested Glass"
+      suggested_glass_text_html: "<strong>%{glass}</strong> is the best glass to drink a %{beer}."
+      no_info: "N/A"
 

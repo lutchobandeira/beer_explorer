@@ -19,9 +19,12 @@ gem "brewery_db", "~> 0.2.4"
 gem "figaro", "~> 1.1", ">= 1.1.1"
 gem "materialize-sass", "~> 0.98.2"
 gem "material_icons", "~> 2.2", ">= 2.2.1"
+gem "font-awesome-rails", "~> 4.7", ">= 4.7.0.2"
 
 group :development, :test do
   gem "byebug", platform: :mri
+  gem "factory_girl_rails", "~> 4.8"
+  gem "faker", "~> 1.7", ">= 1.7.3"
   gem "rspec-rails", "~> 3.5", ">= 3.5.2"
 end
 
@@ -33,6 +36,7 @@ group :development do
 end
 
 group :test do
+  gem "rails-controller-testing", "~> 1.0", ">= 1.0.1"
   gem "shoulda-matchers", git: "https://github.com/thoughtbot/shoulda-matchers.git", branch: "rails-5"
 end
 
