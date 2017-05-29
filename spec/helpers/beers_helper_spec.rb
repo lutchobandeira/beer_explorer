@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe BeersHelper do
-  describe "display_info" do
+  describe "#display_info" do
     let(:info) { Faker::Lorem.word }
 
     context "useful info" do
@@ -17,7 +17,47 @@ RSpec.describe BeersHelper do
     end
   end
 
-  describe "display_food_pairings" do
+  describe "#display_brewery_chips" do
+    context "no brewery" do
+      let(:beer) { build_stubbed(:beer, breweries: nil) }
+
+      it "does not render partial" do
+        expect(helper).to_not receive(:render)
+        helper.display_brewery_chips(beer)
+      end
+    end
+
+    context "with brewery" do
+      let(:beer) { build_stubbed(:beer, :complete) }
+
+      it "renders partial" do
+        expect(helper).to receive(:render).and_return(nil)
+        helper.display_brewery_chips(beer)
+      end
+    end
+  end
+
+  describe "#display_glass" do
+    context "no glass" do
+      let(:beer) { build_stubbed(:beer, glass: nil) }
+
+      it "does not render partial" do
+        expect(helper).to_not receive(:render)
+        helper.display_glass(beer)
+      end
+    end
+
+    context "with glass" do
+      let(:beer) { build_stubbed(:beer, :complete) }
+
+      it "renders partial" do
+        expect(helper).to receive(:render).and_return(nil)
+        helper.display_glass(beer)
+      end
+    end
+  end
+
+  describe "#display_food_pairings" do
     context "no food pairings" do
       let(:beer) { build_stubbed(:beer, food_pairings: nil) }
 

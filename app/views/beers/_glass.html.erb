@@ -1,0 +1,23 @@
+<div class="col s12">
+  <div class="card horizontal grey darken-4">
+    <div class="card-image">
+      <%= glass_image(beer.glass["name"]) %>
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <span class="card-title grey-text text-darken-1">
+          <%= t("beers.show.suggested_glass") %>
+        </span>
+        <div class="flow-text">
+          <%= t("beers.show.suggested_glass_text_html", glass: beer.glass["name"], beer: beer.name) %>
+        </div>
+      </div>
+      <div class="card-action">
+        <%= link_to "http://www.google.com?q=#{@beer.glass["name"]}" do %>
+          <%= material_icon.search.css_class("left") %>
+          <%= t(".search_glass") %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

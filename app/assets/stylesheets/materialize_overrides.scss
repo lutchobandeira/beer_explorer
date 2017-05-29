@@ -13,3 +13,10 @@ main {
 .brand-logo {
   font-weight: 200;
 }
+
+.noUi-horizontal .noUi-handle,
+.noUi-vertical .noUi-handle,
+.noUi-connect,
+.noUi-target.noUi-horizontal .noUi-tooltip {
+  background-color: color("amber", "darken-1");
+}

@@ -19,6 +19,7 @@ FactoryGirl.define do
       status_display              "Verified"
       available                   { { "name" => "Limited", "description" => "Limited availability."} }
       year                        Date.today.year.to_s
+      breweries                   { [{ "name" => Faker::Lorem.word, "locations" => [{ "display_name" => Faker::Lorem.word, "iso_code" => "US" }] }] }
     end
   end
 end

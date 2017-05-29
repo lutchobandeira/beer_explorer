@@ -12,4 +12,12 @@ en:
       suggested_glass: "Suggested Glass"
       suggested_glass_text_html: "<strong>%{glass}</strong> is the best glass to drink a %{beer}."
       no_info: "N/A"
+  home:
+    index:
+      find_by_style: "Style finder"
+      filters:
+        color: "COLOR (SRM)"
+        ibu: "BITTERNESS (IBU)"
+        abv: "ALCOHOL (ABV)"
+
 

@@ -1,11 +1,30 @@
 <div class="section no-pad-bot" id="index-banner">
   <div class="container">
-    <br><br>
-    <h1 class="header center"><%= t("application.title") %></h1>
-    <div class="row center">
-      <h5 class="header col s12 light"><%= t("application.title") %>
+    <div class="col s12">
+      <div class="card grey darken-4">
+        <div class="card-content">
+          <span class="card-title grey-text text-darken-1">
+            <%= t(".find_by_style") %>
+          </span>
+          <span class="grey-text text-darken-1">
+            <div class="row center-align filters">
+              <div class="col s4">
+                <div id="color-input"></div>
+                <div class="filter-label"><%= t(".filters.color") %></div>
+              </div>
+              <div class="col s4">
+                <div id="ibu-input"></div>
+                <div class="filter-label"><%= t(".filters.ibu") %></div>
+              </div>
+              <div class="col s4">
+                <div id="abv-input"></div>
+                <div class="filter-label"><%= t(".filters.abv") %></div>
+              </div>
+              <div class="col s12" id="styles"></div>
+            </div>
+          </span>
+        </div>
+      </div>
     </div>
-    <br><br>
-
   </div>
 </div>

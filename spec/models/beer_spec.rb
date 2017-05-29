@@ -23,6 +23,7 @@ RSpec.describe Beer do
     it { should respond_to(:beer_variation_id) }
     it { should respond_to(:beer_variation) }
     it { should respond_to(:year) }
+    it { should respond_to(:breweries) }
   end
 
   describe "Validations" do
