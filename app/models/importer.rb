@@ -27,7 +27,7 @@ class Importer
   def fetch_beers
     existing_style_ids = Beer.select("style_original_id").distinct.pluck(:style_original_id)
     Style.where.not(original_id: existing_style_ids).each do |style|
-      beers = @brewery_db.beers.all(styleId: style.original_id)
+      beers = @brewery_db.beers.all(styleId: style.original_id, hasLabels: "Y", withBreweries: "Y")
       beers.each do |remote_beer|
         remote_beer[:original_id]       = remote_beer.delete(:id)
         remote_beer[:style_summary]     = remote_beer.delete(:style)
