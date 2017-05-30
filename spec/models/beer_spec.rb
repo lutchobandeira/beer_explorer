@@ -26,6 +26,17 @@ RSpec.describe Beer do
     it { should respond_to(:breweries) }
   end
 
+  describe "Methods" do
+    describe "#short_name" do
+      let(:last_two_names) { "#{Faker::Lorem.word} #{Faker::Lorem.word}" }
+      let!(:beer) { build_stubbed(:beer, name: "#{Faker::Lorem.word} #{last_two_names}") }
+
+      it "displays the last two names" do
+        expect(beer.short_name).to eq(last_two_names)
+      end
+    end
+  end
+
   describe "Validations" do
     it { should validate_presence_of(:original_id) }
   end

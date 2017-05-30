@@ -1,0 +1,30 @@
+<div class="section no-pad-bot">
+  <div class="container">
+    <div class="row beer-list">
+      <% @beers.each do |beer| %>
+        <div class="col m4 s6">
+          <div class="card grey darken-4">
+            <div class="card-image waves-effect waves-block waves-light">
+              <%= link_to beer_path(beer) do %>
+                <%= image_tag(beer.labels["medium"]) %>
+              <% end %>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-1"><%= beer.short_name %><i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-1"><%= beer.name %><i class="material-icons right">close</i></span>
+              <p class="grey-text text-darken-1"><%= beer.description %></p>
+              <div class="center-align">
+                <%= link_to t(".learn_more"), beer_path(beer), class: "waves-effect waves-teal btn-flat" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="row center-align">
+      <%= paginate @beers %>
+    </div>
+  </div>
+</div>

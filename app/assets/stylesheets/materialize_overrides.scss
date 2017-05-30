@@ -20,3 +20,10 @@ main {
 .noUi-target.noUi-horizontal .noUi-tooltip {
   background-color: color("amber", "darken-1");
 }
+
+.pagination li.active {
+  background-color: color("amber", "darken-1");
+  a {
+    color: $primary-color;
+  }
+}

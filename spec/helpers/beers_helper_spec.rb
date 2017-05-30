@@ -37,6 +37,26 @@ RSpec.describe BeersHelper do
     end
   end
 
+  describe "#display_description" do
+    context "no description" do
+      let(:beer) { build_stubbed(:beer, description: nil) }
+
+      it "does not render partial" do
+        expect(helper).to_not receive(:render)
+        helper.display_description(beer)
+      end
+    end
+
+    context "with description" do
+      let(:beer) { build_stubbed(:beer, :complete) }
+
+      it "renders partial" do
+        expect(helper).to receive(:render).and_return(nil)
+        helper.display_description(beer)
+      end
+    end
+  end
+
   describe "#display_glass" do
     context "no glass" do
       let(:beer) { build_stubbed(:beer, glass: nil) }

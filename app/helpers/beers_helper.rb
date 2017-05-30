@@ -8,6 +8,11 @@ module BeersHelper
     info ? info : t("beers.show.no_info")
   end
 
+  def display_description(beer)
+    return unless beer.description.present?
+    render(partial: "description", locals: { beer: beer })
+  end
+
   def display_glass(beer)
     return unless beer.glass.present?
     render(partial: "glass", locals: { beer: beer })
