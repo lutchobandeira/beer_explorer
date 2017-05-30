@@ -19,3 +19,9 @@
     font-size: 18px;
   }
 }
+
+.chip.style-link {
+  a {
+    color: color("blue-grey", "darken-4");
+  }
+}

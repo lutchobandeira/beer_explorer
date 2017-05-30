@@ -21,6 +21,7 @@ gem "materialize-sass", "~> 0.98.2"
 gem "material_icons", "~> 2.2", ">= 2.2.1"
 gem "font-awesome-rails", "~> 4.7", ">= 4.7.0.2"
 gem "kaminari", "~> 1.0", ">= 1.0.1"
+gem "ransack", "~> 1.8", ">= 1.8.2"
 
 group :development, :test do
   gem "byebug", platform: :mri

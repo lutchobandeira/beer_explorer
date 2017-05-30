@@ -8,8 +8,9 @@
           </div>
           <div class="white-text left beer-title">
             <h4><%= @beer.name %></h4>
-            <span class="chip amber darken-2 gray-text text-darken-4">
-              <%= @beer.style_summary["name"] %>
+            <span class="chip style-link amber darken-2 gray-text text-darken-4">
+              <%= link_to @beer.style_summary["short_name"],
+                          beers_path(q: { style_original_id_eq: @beer.style_original_id }) %>
             </span>
             <%= display_brewery_chips(@beer) %>
           </div>

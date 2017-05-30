@@ -1,6 +1,7 @@
 class BeersController < ApplicationController
   def index
-    @beers = Beer.where.not(labels: nil).page(params[:page])
+    @q = Beer.where.not(labels: nil).ransack(params[:q])
+    @beers = @q.result.page(params[:page])
   end
 
   def show
