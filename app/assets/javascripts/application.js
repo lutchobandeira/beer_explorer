@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require materialize
 //= require materialize/extras/nouislider
+//= require paloma
 //= require_tree .
+
+$(document).ready(function(){
+  Paloma.start();
+});
