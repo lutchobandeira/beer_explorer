@@ -21,6 +21,11 @@ en:
         color: "COLOR (SRM)"
         ibu: "BITTERNESS (IBU)"
         abv: "ALCOHOL (ABV)"
+  styles:
+    styles:
+      color: "COLOR"
+      ibu: "IBU"
+      abv: "ABV"
   views:
     pagination:
       first: "&laquo; First"

@@ -20,7 +20,15 @@
                 <div id="abv-input"></div>
                 <div class="filter-label"><%= t(".filters.abv") %></div>
               </div>
-              <div class="col s12" id="styles"></div>
+              <div class="col s12">
+                <div class="progress" id="preloader" style="display: none;">
+                  <div class="indeterminate"></div>
+                </div>
+              </div>
+              <div class="col s12" id="styles">
+                <i class="material-icons">info_outline</i>
+                <span class="icon-text">Use the filters above to find styles!</span>
+              </div>
             </div>
           </span>
         </div>

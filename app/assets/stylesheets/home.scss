@@ -9,6 +9,31 @@
   margin-top: 10px;
 }
 
+#preloader {
+  width: 70%;
+  margin: 40px 15%;
+}
+
 #styles {
   margin-top: 20px;
+
+  .card {
+    background-color: darken(color("grey", "darken-3"), 10%);
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .badge {
+    margin-right: 10px;
+  }
+
+  a {
+    color: color("grey", "darken-1");
+  }
+
+  .material-icons, .icon-text, .icon-text-caps, .icon-text-tweaked {
+    vertical-align: middle;
+  }
 }

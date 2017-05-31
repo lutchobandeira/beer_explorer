@@ -13,16 +13,6 @@ $(document).ready(function() {
     })
   });
 
-  var filterStyles = function() {
-    $.ajax({
-      url: '/styles/filter',
-      data: { srm_range: colorSlider.noUiSlider.get(),ibu_range: ibuSlider.noUiSlider.get(), abv_range: abvSlider.noUiSlider.get()},
-      success: function(event) {
-        console.log(event);
-      }
-    });
-  }
-
   var ibuSlider = document.getElementById('ibu-input');
   noUiSlider.create(ibuSlider, {
     start: [1, 70],
@@ -50,6 +40,25 @@ $(document).ready(function() {
       decimals: 0
     })
   });
+
+  var filterStyles = function() {
+    var srm_range = colorSlider.noUiSlider.get();
+    var ibu_range = ibuSlider.noUiSlider.get();
+    var abv_range = abvSlider.noUiSlider.get();
+
+    $.ajax({
+      url: '/styles/filter',
+      data: {srm_range: srm_range,ibu_range: ibu_range, abv_range: abv_range},
+      beforeSend: function() {
+        $('.progress').show();
+        $('#styles').hide();
+      },
+      complete: function() {
+        $('.progress').hide();
+        $('#styles').show();
+      }
+    });
+  }
 
   colorSlider.noUiSlider.on('change', function(){
     filterStyles();
