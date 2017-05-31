@@ -1,4 +1,4 @@
-<div class="col s12">
+<div class="col s12 hide-on-small-only">
   <div class="card horizontal grey darken-4">
     <div class="card-image">
       <%= glass_image(beer.glass["name"]) %>
@@ -18,6 +18,26 @@
           <%= t(".search_glass") %>
         <% end %>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="col s12 hide-on-med-and-up">
+  <div class="card grey darken-4">
+    <div class="card-image">
+      <%= glass_image(beer.glass["name"]) %>
+      <span class="card-title"><%= t("beers.show.suggested_glass") %></span>
+    </div>
+    <div class="card-content">
+      <div class="flow-text">
+        <%= t("beers.show.suggested_glass_text_html", glass: beer.glass["name"], beer: beer.name) %>
+      </div>
+    </div>
+    <div class="card-action">
+      <%= link_to "http://www.google.com?q=#{@beer.glass["name"]}" do %>
+        <%= material_icon.search.css_class("left") %>
+        <%= t(".search_glass") %>
+      <% end %>
     </div>
   </div>
 </div>
