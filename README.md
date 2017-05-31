@@ -1,24 +1,43 @@
-# README
+# Beer Explorer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project created during my free time. It uses the data from [BreweryDB](http://www.brewerydb.com/developers/docs), a really nice beer api. I am using the free api access, which has a limit of 400 requests a day. In this project I use the api just to collect data. In a real application I would use the paid access, that gives the option to implement a webhook to keep the data up to date.
 
-Things you may want to cover:
+## How to run in your machine
 
-* Ruby version
+Clone this repo:
 
-* System dependencies
+```console
+git clone git@github.com:lutchobandeira/beer_explorer.git
+cd beer_explorer
+bundle install
+```
 
-* Configuration
+Create your api key at [BreweryDB](http://www.brewerydb.com/developers/docs) site.
 
-* Database creation
+Place the api key at ```config/application.yml```:
 
-* Database initialization
+```ruby
+brewerydb_api_key: <your api key>
+```
 
-* How to run the test suite
+Set up your ```config/database.yml``` file with your database configuration. An example file is provided:
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+cp config/database.yml.example config/database.yml
+```
 
-* Deployment instructions
+Next up, create your db:
 
-* ...
+```console
+rails db:create
+rails db:migrate
+```
+
+Run the rake task to import data from the api:
+
+```console
+rake beer_explorer:import_beers
+```
+The execution will take some minutes until our api daily limit is reached.
+
+That's it!
