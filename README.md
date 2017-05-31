@@ -2,7 +2,9 @@
 
 This is a project created during my free time. It uses the data from [BreweryDB](http://www.brewerydb.com/developers/docs), a really nice beer api. I am using the free api access, which has a limit of 400 requests a day. In this project I use the api just to collect data. In a real application I would use the paid access, that gives the option to implement a webhook to keep the data up to date.
 
-## How to run in your machine
+The application is deployed at heroku: http://beerexplorerapp.herokuapp.com/
+
+## How to run it in your machine
 
 Clone this repo:
 
