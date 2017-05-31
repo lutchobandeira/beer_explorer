@@ -21,6 +21,7 @@ en:
         color: "COLOR (SRM)"
         ibu: "BITTERNESS (IBU)"
         abv: "ALCOHOL (ABV)"
+        message: "Use the filters above to find styles!"
   styles:
     styles:
       color: "COLOR"

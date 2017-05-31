@@ -24,6 +24,6 @@ module BeersHelper
   end
 
   def glass_image(glass)
-    image_tag("glassware/#{glass.downcase}")
+    image_tag("glassware/#{glass.downcase}.jpg")
   end
 end
