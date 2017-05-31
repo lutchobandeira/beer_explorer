@@ -38,8 +38,16 @@ rails db:migrate
 Run the rake task to import data from the api:
 
 ```console
-rake beer_explorer:import_beers
+rake beer_explorer:import
 ```
-The execution will take some minutes until our api daily limit is reached.
+The execution will take some minutes until api daily limit is reached.
 
-That's it!
+Optionally you can run the specs:
+
+```console
+rspec spec
+```
+
+## This is an on-going project
+
+New features are coming!
