@@ -1,15 +1,16 @@
 <footer class="page-footer grey darken-4">
   <div class="container">
     <div class="row">
-      <div class="col l6 s12">
+      <div class="col s12">
         <h5 class="white-text"><%= t("application.title") %></h5>
-        <p class="grey-text text-lighten-4"></p>
+        <blockquote>
+          <%= t(".quote_html", icon: fa_icon("beer", class: "fa-flip-horizontal")) %>
+        </blockquote>
+        <div class="chip grey darken-3 white-text">
+          <img src="https://avatars0.githubusercontent.com/u/1225630?v=3&s=460" class="circle avatar">
+          <%= t(".repo_info_html", source_code_link: link_to(t(".source_code"), "https://github.com/lutchobandeira/beer_explorer")) %>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">
-      <%= t("application.footer.copyright") %>
     </div>
   </div>
 </footer>

@@ -1,6 +1,11 @@
 en:
   application:
     title: "Beer Explorer"
+  layouts:
+    footer:
+      quote_html: "Made with %{icon}"
+      repo_info_html: "Check the %{source_code_link} of this project!"
+      source_code: "source code"
   beers:
     index:
       learn_more: "Learn more"
