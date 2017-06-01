@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col s12">
+    <nav>
+      <div class="nav-wrapper">
+        <%= search_form_for(@q, url: beers_path) do |f| %>
+          <div class="input-field">
+            <%= f.search_field :name_cont, type: "search", placeholder: t(".placeholder") %>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        <% end %>
+      </div>
+    </nav>
+  </div>
+</div>

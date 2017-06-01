@@ -16,8 +16,14 @@ RSpec.describe BeersController do
       let!(:filtered_style) { create(:style) }
       let!(:filtered_beer)  { create(:beer, :complete, style_original_id: filtered_style.original_id) }
 
-      it "filters beers" do
+      it "filters beers by style" do
         get :index, q: { style_original_id_eq: filtered_style.original_id }
+        expect(assigns(:beers).size).to eq(1)
+        expect(assigns(:beers)).to include(filtered_beer)
+      end
+
+      it "filters beers by name" do
+        get :index, q: { name_cont: filtered_beer.name }
         expect(assigns(:beers).size).to eq(1)
         expect(assigns(:beers)).to include(filtered_beer)
       end

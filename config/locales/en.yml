@@ -27,6 +27,9 @@ en:
         ibu: "BITTERNESS (IBU)"
         abv: "ALCOHOL (ABV)"
         message: "Use the filters above to find styles!"
+  shared:
+    search_form:
+      placeholder: "Which delicious beer would you like to drink?"
   styles:
     styles:
       color: "COLOR"
